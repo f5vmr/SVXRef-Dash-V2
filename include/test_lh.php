@@ -68,9 +68,14 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 <?php
 
 echo "we are here now";
-echo exec('cd ~/home/tmp');
+echo exec('cd ~/home/tmp',$output,$code);
+print_r($output."</br>",true);
+print_r($code."</br>",true);
+
 echo "now here";
-echo exec('ls -l *.txt');
+echo exec('ls -l *.txt',$output,$code);
+print_r($output."</br>",true);
+print_r($code."</br>",true);
 echo "and finally here";
 $json_str = file_get_contents('~/home/tmp/cache_json.txt');
   $json_size = strlen($json_str);
