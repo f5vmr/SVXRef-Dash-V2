@@ -67,12 +67,12 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
 
-echo "we are here now";
+echo "we are here now</br>";
 $output = exec('cd /tmp');
 print_r($output);
 echo "</br>";
 
-echo "now here";
+echo "now here</br>";
 $output1 = exec('ls -l /tmp/');
 print_r($output1);
 echo "</br>";
