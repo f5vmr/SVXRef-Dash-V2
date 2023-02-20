@@ -66,7 +66,7 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 
 <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
-  $json_str = file_get_contents("/tmp/cache_json.txt");
+  $json_str = file_get_contents('/tmp/cache_json.txt');
 echo $json_str;
   $data = json_decode($json_str, true);
   echo'<table>';
