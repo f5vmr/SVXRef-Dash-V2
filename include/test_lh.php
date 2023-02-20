@@ -68,6 +68,7 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 <?php
   $file = "/tmp/cache_json.txt";
   $nodeInfo = json_decode(file_get_contents($file), true);
+  echo $nodeInfo;
   foreach ($nodeInfo as $key => $value) {
     if (is_array($value)) {
       foreach ($value as $k => $v) {
