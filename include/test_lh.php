@@ -66,10 +66,13 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 
 <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
+
 echo "we are here now";
 echo exec('cd ~/home/tmp');
+echo "now here";
 echo exec('ls -l *.txt');
-  $json_str = file_get_contents('~/home/tmp/cache_json.txt');
+echo "and finally here";
+$json_str = file_get_contents('~/home/tmp/cache_json.txt');
   $json_size = strlen($json_str);
   echo 'JSON size: ' . format_bytes($json_size);
 
