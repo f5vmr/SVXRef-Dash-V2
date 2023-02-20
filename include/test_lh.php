@@ -73,7 +73,7 @@ print_r($output);
 echo "</br>";
 
 echo "now here";
-$output1 = exec('ls -l');
+$output1 = exec('ls -l ~/home/tmp/');
 print_r($output1);
 echo "</br>";
 echo "and finally here";
