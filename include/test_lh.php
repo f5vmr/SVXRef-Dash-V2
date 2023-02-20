@@ -66,12 +66,12 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 
 <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
-  $json_str = "/tmp/cache_json.txt";
+  $json_str = file_get_contents("/tmp/cache_json.txt");
 
-  $data = json_decode(file_get_contents($json_str), true);
-  echo'<table>'.$data;
+  $data = json_decode($json_str, true);
+  echo'<table>';
   foreach ($data as $row) {
-    echo '<tr>' . $data . $row;    
+    echo '<tr>';    
       foreach ($row as $key => $value) {
         echo '<td>' . htmlspecialchars($value) . '</td>';
       }
