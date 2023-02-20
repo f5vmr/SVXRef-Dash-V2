@@ -69,12 +69,12 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 
 echo "we are here now";
 $output = exec('cd ~/home/tmp');
-print_r($output,true);
+print_r($output);
 echo "</br>";
 
 echo "now here";
 $output1 = exec('ls -l');
-print_r($output1,true);
+print_r($output1);
 echo "</br>";
 echo "and finally here";
 $json_str = file_get_contents('~/home/tmp/cache_json.txt');
