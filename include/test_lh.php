@@ -73,7 +73,7 @@ echo $json_str;
   $data = json_decode(file_get_contents($json_str), true);
   echo'<table>';
   foreach ($data as $row) {
-    echo '<tr>';    
+    echo '<tr>' . $data . $row;    
       foreach ($row as $key => $value) {
         echo '<td>' . htmlspecialchars($value) . '</td>';
       }
