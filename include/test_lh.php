@@ -63,7 +63,7 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 }
 */
 ?>
-<?php
+
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
   $file = "/tmp/cache_json.txt";
@@ -78,6 +78,5 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
     }
   }
 ?>
- ?>
   </table></form>
 </fieldset>
