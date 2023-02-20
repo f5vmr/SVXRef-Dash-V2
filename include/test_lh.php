@@ -68,14 +68,13 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 <?php
 
 echo "we are here now";
-echo exec('cd ~/home/tmp',$output,$code);
+exec('cd ~/home/tmp',$output,$code);
 print_r($output,true);
 echo "</br>";
 print_r($code,true);
 echo "</br>";
-
 echo "now here";
-echo exec('ls -l *.txt',$output,$code);
+exec('ls -l',$output,$code);
 print_r($output,true);
 echo "</br>";
 print_r($code,true);
