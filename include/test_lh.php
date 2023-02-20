@@ -66,6 +66,7 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 
 <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
+echo "we are here now";
 shell_exec('echo cat /tmp/cache_json.txt');
   $json_str = file_get_contents('/tmp/cache_json.txt');
   
