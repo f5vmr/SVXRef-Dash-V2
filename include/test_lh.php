@@ -76,7 +76,7 @@ echo "now here";
 $output1 = exec('ls -l /home/tmp/');
 print_r($output1);
 echo "</br>";
-echo "and finally here";
+echo "and finally here</br>";
 $json_str = file_get_contents('/home/tmp/cache_json.txt');
   $json_size = strlen($json_str);
   echo 'JSON size: ' . format_bytes($json_size);
