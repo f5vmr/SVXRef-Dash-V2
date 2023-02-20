@@ -69,7 +69,7 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
   $file = "/tmp/cache_json.txt";
   echo $file;
   $json_str = file_get_contents($file);
-
+echo $json_str;
   $data = json_decode(file_get_contents($json_str), true);
   echo'<table>';
   foreach ($data as $row) {
