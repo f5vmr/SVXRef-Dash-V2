@@ -67,17 +67,19 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
   $file = "/tmp/cache_json.txt";
-  $nodeInfo = json_decode(file_get_contents($file), true);
-  echo $nodeInfo;
-  foreach ($nodeInfo as $key => $value) {
-    if (is_array($value)) {
-      foreach ($value as $k => $v) {
-        echo "<label>$k</label><input type='text' name='$key-$k' value='$v'><br>";
+  $json_str = file_get_contents($file);
+
+  $nodeInfo = json_decode(file_get_contents($json_str), true);
+  echo'<table>';
+  foreach ($data as $row) {
+    echo '<tr>';    
+      foreach ($row as $key => $value) {
+        echo '<td>' . htmlspecialchars($value) . '</td>';
       }
-    } else {
-      echo "<label>$key</label><input type='text' name='$key' value='$value'><br>";
-    }
+    echo '</tr>';
+      
   }
+  echo '</table>'
 ?>
   </table></form>
 </fieldset>
