@@ -17,6 +17,7 @@ include_once __DIR__.'/tgdb.php';
       <th>TG Name</th>
     </tr>
 <?php
+/*
 $i = 0;
 for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 	if (isset($lastHeard[$i])) {
@@ -60,7 +61,23 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 		}
 	}
 }
-
+*/
 ?>
+<?php
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<?php
+  $file = "/tmp/cache_json.txt";
+  $nodeInfo = json_decode(file_get_contents($file), true);
+  foreach ($nodeInfo as $key => $value) {
+    if (is_array($value)) {
+      foreach ($value as $k => $v) {
+        echo "<label>$k</label><input type='text' name='$key-$k' value='$v'><br>";
+      }
+    } else {
+      echo "<label>$key</label><input type='text' name='$key' value='$value'><br>";
+    }
+  }
+?>
+ ?>
   </table></form>
 </fieldset>
