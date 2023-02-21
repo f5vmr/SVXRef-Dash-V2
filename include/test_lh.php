@@ -66,44 +66,7 @@ for ($i = 0;  ($i <= 15); $i++) { //Last 15 calls
 
 <form action="<?php //echo $_SERVER['PHP_SELF']; ?>" method="post">
 <?php
-
-echo "we are here now</br>";
-$output = exec('cd /tmp');
-print_r($output);
-echo "</br>";
-
-echo "now here</br>";
-$output1 = exec('ls -l /tmp/');
-print_r($output1);
-echo "</br>";
-echo "and finally here</br>";
-$json_str = file_get_contents('/tmp/cache_json.txt');
-  $json_size = strlen($json_str);
-  echo 'JSON size: ' . format_bytes($json_size);
-
-
-  $data = json_decode($json_str, true);
-  echo'<table>';
-  foreach ($data as $row) {
-    echo '<tr>';    
-      foreach ($row as $key => $value) {
-        echo '<td>' . htmlspecialchars($value) . '</td>';
-      }
-    echo '</tr>';
-      
-  }
-  echo '</table>'
-
-?>
-<?php
-function format_bytes($bytes, $precision = 2) {
-    $units = array('B', 'KB', 'MB', 'GB', 'TB');
-    $bytes = max($bytes, 0);
-    $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
-    $pow = min($pow, count($units) - 1);
-    $bytes /= pow(1024, $pow);
-    return round($bytes, $precision) . ' ' . $units[$pow];
-}
+print_r(getsvxlog());
 ?>
   </table></form>
 </fieldset>
