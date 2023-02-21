@@ -38,7 +38,8 @@ define("EL_NODE_NR",'$EL_node');
         
 
 
-
+        define("ROOT","~/home");
+        define("CACHE","/home/tmp/cache_json.txt");
         define("SVXCONFPATH", "/etc/svxlink/");
         define("REFCONFIG", "svxreflector.conf");
         define("SVXLOGPATH", "/var/log");
