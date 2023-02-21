@@ -9,7 +9,7 @@ if (fopen($REFCONFIGFile, 'r')) {
     $fmnetwork = $REFCONFIG['ReflectorLogic']['FMNET'];
     $tgUri = $REFCONFIG['ReflectorLogic']['TG_URI'];
 }
-else { $callsign="NOCALL"; 
+else { $callsign="SVXPortal"; 
        $fmnetwork="not registered";
 	}
 
@@ -32,7 +32,7 @@ else { $callsign="NOCALL";
     <meta http-equiv="pragma" content="no-cache" />
 <link rel="shortcut icon" href="images/favicon.ico" sizes="16x16 32x32" type="image/png">    
 
-<?php echo ("<title>" . "SVXPortal " . " Dashboard</title>"); ?>
+<?php echo ("<title>" . "SVXPortal" . " Dashboard</title>"); ?>
 
 <?php include_once "include/browserdetect.php"; ?>
     <script type="text/javascript" src="scripts/jquery.min.js"></script>
